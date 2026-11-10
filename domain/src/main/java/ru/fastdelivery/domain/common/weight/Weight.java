@@ -27,7 +27,7 @@ public record Weight(BigInteger weightGrams) implements Comparable<Weight> {
 
     public BigDecimal kilograms() {
         return new BigDecimal(weightGrams)
-                .divide(BigDecimal.valueOf(1000), 100, RoundingMode.HALF_UP);
+                .divide(BigDecimal.valueOf(1000), 4, RoundingMode.HALF_UP);
     }
 
     public Weight add(Weight additionalWeight) {

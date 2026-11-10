@@ -27,7 +27,7 @@ public record Price(
 
     public Price max(Price price) {
         if (!currency.equals(price.currency)) {
-            throw new IllegalArgumentException("Cannot compare Prices in difference Currency!");
+            throw new IllegalArgumentException("Cannot compare prices in different currencies!");
         }
         return new Price(this.amount.max(price.amount), this.currency);
     }
